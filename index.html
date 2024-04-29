@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -12,8 +12,93 @@
 </head>
 
 <body>
-    <header>
+    <header class="container mx-auto">
+        <!-- navbar -->
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </div>
+                    <div tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-16">
+                        <div class="tooltip tooltip-bottom p-3 mt-3 bg-gray-50 border-2 border-[#03071219] rounded-full" data-tip="Home">
+                            <img src="images/home.svg" alt="">
+                        </div>
+                        <div class="tooltip tooltip-bottom p-3 mt-3 bg-gray-50 border-2 border-[#03071219] rounded-full" data-tip="Edit">
+                            <img src="images/edit.svg" alt="">
+                         </div>
+                        <div class="tooltip tooltip-bottom p-3 mt-3 bg-gray-50 border-2 border-[#03071219] rounded-full" data-tip="Add">
+                           <img src="images/add.svg" alt="">
+                        </div>
+                        <div class="tooltip tooltip-right p-3 mt-3 bg-gray-50 border-2 border-[#03071219] rounded-full" data-tip="Edit">
+                            <img src="images/flag.svg" alt="">
+                         </div>
+                    </div>
+                </div>
+                <!-- <a class="btn btn-ghost text-xl">daisyUI</a> -->
+                <img src="images/logo.png" alt="">
+            </div>
+            <!-- <div class="navbar-end hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li><a>Item 1</a></li>
+                <li><a>Item 3</a></li>
+              </ul>
+            </div> -->
+            <div class="navbar-end hidden lg:flex">
+                <div class="menu menu-horizontal space-x-3">
+                    <div class="tooltip tooltip-bottom p-3 mt-3 bg-gray-50 border-2 border-[#03071219] rounded-full" data-tip="Home">
+                        <img src="images/home.svg" alt="">
+                    </div>
+                    <div class="tooltip tooltip-bottom p-3 mt-3 bg-gray-50 border-2 border-[#03071219] rounded-full" data-tip="Edit">
+                        <img src="images/edit.svg" alt="">
+                     </div>
+                    <div class="tooltip tooltip-bottom-right p-3 mt-3 bg-gray-50 border-2 border-[#03071219] rounded-full" data-tip="Add">
+                       <img src="images/add.svg" alt="">
+                    </div>
+                    <div class="tooltip tooltip-bottom-right p-3 mt-3 bg-gray-50 border-2 border-[#03071219] rounded-full" data-tip="Add">
+                       <img src="images/flag.svg" alt="">
+                    </div>
+                </div>
+                <a class="btn bg-[#797DFC] mt-2 ml-6 text-white px-10 py-4 rounded-3xl">Sign In</a>
+            </div>
+        </div>
 
+        <!-- banner  -->
+        <div class="hero lg:h-[550px] rounded-3xl bg-[#12132D]" style="background-image: url(images/bgbanner.png);">
+            <div class="hero-overlay bg-opacity-30"></div>
+            <div class="hero-content flex-col gap-4 lg:gap-32 lg:flex-row">
+              <div class="">
+                <h1 class="text-5xl lg:text-6xl font-black text-white ">Welcome to the <span class="bg-gradient-to-r from-sky-600 to-indigo-900 text-transparent bg-clip-text">ReTro</span>Forum</h1>
+                <p class="py-6 text-[#FFFFFFCC] text-xl font-medium">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
+                
+              </div>
+              <div class="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <form class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Email</span>
+                    </label>
+                    <input type="email" placeholder="email" class="input input-bordered" required />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Password</span>
+                    </label>
+                    <input type="password" placeholder="password" class="input input-bordered" required />
+                    <label class="label">
+                      <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                    </label>
+                  </div>
+                  <div class="form-control mt-6">
+                    <button class="btn btn-primary">Login</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
     </header>
     <main>
 
