@@ -6,13 +6,11 @@ const allPostData=async ()=>{
 }
 
 const displayAllPosts=(allPosts) =>{
-    console.log(allPosts);
     const cardContainer=document.getElementById('card-container');
-
+    
     allPosts.forEach(post =>{
-        const newPost=JSON.stringify(post);
-        
-
+      
+      
         const postCard = document.createElement('div');
         postCard.classList = `my-5  flex flex-col lg:flex-row gap-4 p-16 bg-[#7D7DFC1A] rounded-2xl`;
         postCard.innerHTML=`
@@ -52,7 +50,7 @@ const displayAllPosts=(allPosts) =>{
                       </div>
                   </div>
                   <div>
-                    <img onclick="markAsRead(${newPost})" src="images/email 1.svg" alt="">
+                    <img onclick="markAsRead('${post.title}',${post.view_count})" src="images/email 1.svg" alt="">
                   </div>
                </div>
             </div> 
@@ -63,8 +61,28 @@ const displayAllPosts=(allPosts) =>{
     })
 }
 
+let count=0;
 allPostData();
 
-const markAsRead=(post) =>{
-    console.log(post);
+const markAsRead=(title,viewCount) =>{
+  count++
+  console.log(count)
+  const counter=document.getElementById('counter');
+  counter.innerText=count;
+  const readContainer=document.getElementById('read-container');
+  const cardDiv=document.createElement('div');
+  cardDiv.classList=`my-4 p-4 flex items-center  justify-between bg-white rounded-2xl`;
+  cardDiv.innerHTML=`
+  <p class="w-1/2">${title}</p>
+  <div class="flex items-center">
+    <img src="images/tabler-icon-eye.svg" alt="">
+    <p>${viewCount}</p>
+  </div>
+  `
+
+  readContainer.appendChild(cardDiv)
 }
+
+
+
+
