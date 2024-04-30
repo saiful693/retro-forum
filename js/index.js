@@ -84,5 +84,70 @@ const markAsRead=(title,viewCount) =>{
 }
 
 
+const latestPost=async ()=>{
+  const res=await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts');
+  const data=await res.json();
+  displayLatestPost(data);
+}
+
+const displayLatestPost=(allPosts) =>{
+  console.log(allPosts)
+  const latestPostContainer=document.getElementById('latest-Post-Container');
+  
+  allPosts.forEach(post =>{
+    const latestCard = document.createElement('div');
+    latestCard.classList = `card  bg-base-100 shadow-xl`;
+    latestCard.innerHTML=` 
+
+    <figure class="p-6"><img class="rounded-2xl" src="${post.cover_image}" alt="Shoes" /></figure>
+              <div class="card-body">
+                <div class="flex gap-2">
+                  <img src="images/box.png" alt="">
+                  <p>${post?.author?.posted_date
+                    || 'No publish date'}</p>
+                </div>
+                <h2 class="card-title text-lg font-bold">${post.title}</h2>
+                <p class="text-[#12132D99]">${post.description}</p>
+                <div class="card-actions justify-start items-center">
+                  <div class="w-8 h-8">
+                    <img class="rounded-full" src="${post.profile_image
+                    }" alt="">
+                  </div>
+                  <div>
+                    <h4 class="font-bold">${post.author.name}</h4>
+                    <p>${post?.author?.designation
+                      || 'Unknown'}</p>
+                  </div>
+                </div>
+              </div>
+    `
+    latestPostContainer.appendChild(latestCard); 
+  })
+}
+
+latestPost();
+
+
+// handle search button
+const handleSearch = (isShowAll) => {
+  toggleLoadingSpinner(true);
+  const searchField = document.getElementById('search-field');
+  const searchText = searchField.value;
+  // console.log(searchText);
+  loadData(searchText,isShowAll)
+}
+
+
+// handle loading spinner
+const toggleLoadingSpinner = (isLoading) => {
+  const loadingSpinner = document.getElementById('loading-spinner');
+  if (isLoading) {
+      loadingSpinner.classList.remove('hidden')
+  }
+  else{
+      loadingSpinner.classList.add('hidden')
+  }
+}
+
 
 
