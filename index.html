@@ -2,173 +2,198 @@
 <html lang="en" data-theme="light">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retro Forum</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retro Forum</title>
 
-    <!-- daisyUI and Tailwind -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- daisyUI and Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <header class="container mx-auto">
-        <!-- navbar -->
-        <div class="navbar bg-base-100">
-            <div class="navbar-start">
-                <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                    </div>
-                    <div tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-16">
-                        <div class="tooltip tooltip-bottom p-3 mt-3 bg-gray-50 border-2 border-[#03071219] rounded-full" data-tip="Home">
-                            <img src="images/home.svg" alt="">
-                        </div>
-                        <div class="tooltip tooltip-bottom p-3 mt-3 bg-gray-50 border-2 border-[#03071219] rounded-full" data-tip="Edit">
-                            <img src="images/edit.svg" alt="">
-                         </div>
-                        <div class="tooltip tooltip-bottom p-3 mt-3 bg-gray-50 border-2 border-[#03071219] rounded-full" data-tip="Add">
-                           <img src="images/add.svg" alt="">
-                        </div>
-                        <div class="tooltip tooltip-right p-3 mt-3 bg-gray-50 border-2 border-[#03071219] rounded-full" data-tip="Edit">
-                            <img src="images/flag.svg" alt="">
-                         </div>
-                    </div>
-                </div>
-                <!-- <a class="btn btn-ghost text-xl">daisyUI</a> -->
-                <img src="images/logo.png" alt="">
+  <header class="container mx-auto">
+    <!-- navbar -->
+    <div class="navbar bg-base-100">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+          </div>
+          <div tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-16">
+            <div class="tooltip tooltip-bottom p-3 mt-3 bg-gray-50 border-2 border-[#03071219] rounded-full"
+              data-tip="Home">
+              <img src="images/home.svg" alt="">
             </div>
-            <div class="navbar-end hidden lg:flex">
-                <div class="menu menu-horizontal space-x-3">
-                    <div class="tooltip tooltip-bottom p-3 mt-3 bg-gray-50 border-2 border-[#03071219] rounded-full" data-tip="Home">
-                        <img src="images/home.svg" alt="">
-                    </div>
-                    <div class="tooltip tooltip-bottom p-3 mt-3 bg-gray-50 border-2 border-[#03071219] rounded-full" data-tip="Edit">
-                        <img src="images/edit.svg" alt="">
-                     </div>
-                    <div class="tooltip tooltip-bottom-right p-3 mt-3 bg-gray-50 border-2 border-[#03071219] rounded-full" data-tip="Add">
-                       <img src="images/add.svg" alt="">
-                    </div>
-                    <div class="tooltip tooltip-bottom-right p-3 mt-3 bg-gray-50 border-2 border-[#03071219] rounded-full" data-tip="Add">
-                       <img src="images/flag.svg" alt="">
-                    </div>
-                </div>
-                <a class="btn bg-[#797DFC] mt-2 ml-6 text-white px-10 py-4 rounded-3xl">Sign In</a>
+            <div class="tooltip tooltip-bottom p-3 mt-3 bg-gray-50 border-2 border-[#03071219] rounded-full"
+              data-tip="Edit">
+              <img src="images/edit.svg" alt="">
             </div>
+            <div class="tooltip tooltip-bottom p-3 mt-3 bg-gray-50 border-2 border-[#03071219] rounded-full"
+              data-tip="Add">
+              <img src="images/add.svg" alt="">
+            </div>
+            <div class="tooltip tooltip-right p-3 mt-3 bg-gray-50 border-2 border-[#03071219] rounded-full"
+              data-tip="Edit">
+              <img src="images/flag.svg" alt="">
+            </div>
+          </div>
         </div>
+        <!-- <a class="btn btn-ghost text-xl">daisyUI</a> -->
+        <img src="images/logo.png" alt="">
+      </div>
+      <div class="navbar-end hidden lg:flex">
+        <div class="menu menu-horizontal space-x-3">
+          <div class="tooltip tooltip-bottom p-3 mt-3 bg-gray-50 border-2 border-[#03071219] rounded-full"
+            data-tip="Home">
+            <img src="images/home.svg" alt="">
+          </div>
+          <div class="tooltip tooltip-bottom p-3 mt-3 bg-gray-50 border-2 border-[#03071219] rounded-full"
+            data-tip="Edit">
+            <img src="images/edit.svg" alt="">
+          </div>
+          <div class="tooltip tooltip-bottom-right p-3 mt-3 bg-gray-50 border-2 border-[#03071219] rounded-full"
+            data-tip="Add">
+            <img src="images/add.svg" alt="">
+          </div>
+          <div class="tooltip tooltip-bottom-right p-3 mt-3 bg-gray-50 border-2 border-[#03071219] rounded-full"
+            data-tip="Add">
+            <img src="images/flag.svg" alt="">
+          </div>
+        </div>
+        <a class="btn bg-[#797DFC] mt-2 ml-6 text-white px-10 py-4 rounded-3xl">Sign In</a>
+      </div>
+    </div>
 
-        <!-- banner  -->
-        <div class="hero lg:h-[550px] rounded-3xl bg-[#12132D]" style="background-image: url(images/bgbanner.png);">
-            <div class="hero-overlay bg-opacity-30"></div>
-            <div class="hero-content flex-col gap-4 lg:gap-32 lg:flex-row">
-              <div class="">
-                <h1 class="text-5xl lg:text-6xl font-black text-white ">Welcome to the <span class="bg-gradient-to-r from-sky-600 to-indigo-900 text-transparent bg-clip-text">ReTro</span>Forum</h1>
-                <p class="py-6 text-[#FFFFFFCC] text-xl font-medium">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
-                <!-- Button -->
-                <label class="w-1/2 rounded-3xl input input-bordered flex items-center gap-1">
-                  <input type="text" class="grow" placeholder="Search here anything" />
-                  <span class="badge bg-[#797DFC] px-12 py-5  text-white text-xl font-bold">Search</span>
-                </label>
-              </div>
-              <div class="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                <div class="p-12 space-y-4">
-                  <div class="flex justify-between text-2xl font-medium text-[#12132D80]">
-                    <p>Registered Users</p>
-                    <p>01</p>
-                  </div>
-                  <div class="flex justify-between text-2xl font-medium text-[#12132D80]">
-                    <p>Forum </p>
-                    <p>05 </p>
-                  </div>
-                  <div class="flex justify-between text-2xl font-medium text-[#12132D80]">
-                    <p>Topics</p>
-                    <p>01</p>
-                  </div>
-                  <div class="flex justify-between text-2xl font-medium text-[#12132D80]">
-                    <p>Replies</p>
-                    <p>01</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-    </header>
-    <main class="container mx-auto my-24">
-        <h2 class="text-4xl font-black text-center ">Let’s Discuss</h2>
-        <p class="mt-6 text-[#12192D99] text-center">Yes, you can run unit tests and view the results directly within the app. <br>     The integrated testing features allow for a streamlined .</p>
-      <!-- discuss container -->
-      <div class="flex flex-col lg:flex-row justify-between mt-12">
-        <!-- card container -->
-        <div id="card-container">
-          <!-- card 1 -->
-       
+    <!-- banner  -->
+    <div class="hero lg:h-[550px] rounded-3xl bg-[#12132D]" style="background-image: url(images/bgbanner.png);">
+      <div class="hero-overlay bg-opacity-30"></div>
+      <div class="hero-content flex-col gap-4 lg:gap-32 lg:flex-row">
+        <div class="">
+          <h1 class="text-5xl lg:text-6xl font-black text-white ">Welcome to the <span
+              class="bg-gradient-to-r from-sky-600 to-indigo-900 text-transparent bg-clip-text">ReTro</span>Forum</h1>
+          <p class="py-6 text-[#FFFFFFCC] text-xl font-medium">Share your favorite opinion and win and wp <br> forum
+            coffee mug!</p>
+          <!-- Button -->
+          <label class="w-1/2 rounded-3xl input input-bordered flex items-center gap-1">
+            <input id="search-field" type="text" class="grow" placeholder="Search here anything" />
+            <span onclick="handleSearch()"
+              class="badge bg-[#797DFC] px-12 py-5  text-white text-xl font-bold">Search</span>
+          </label>
         </div>
-        <!-- mark as read container   -->
-        <div class="min-w-96 bg-[#12192D0D] rounded-2xl p-6">
-          <div class="flex justify-between">
-            <h4 class="text-xl font-bold">Title</h4>
-            <div class="flex gap-1">
-              <img src="images/readed.svg" alt="">
-              <p class="w-full">Mark as read ( <span id="counter"></span> )</p>
+        <div class="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div class="p-12 space-y-4">
+            <div class="flex justify-between text-2xl font-medium text-[#12132D80]">
+              <p>Registered Users</p>
+              <p>01</p>
+            </div>
+            <div class="flex justify-between text-2xl font-medium text-[#12132D80]">
+              <p>Forum </p>
+              <p>05 </p>
+            </div>
+            <div class="flex justify-between text-2xl font-medium text-[#12132D80]">
+              <p>Topics</p>
+              <p>01</p>
+            </div>
+            <div class="flex justify-between text-2xl font-medium text-[#12132D80]">
+              <p>Replies</p>
+              <p>01</p>
             </div>
           </div>
-          <div id="read-container">
-            <!-- card1 -->
-            <!-- <div class="my-4 p-4 flex items-center  justify-between bg-white rounded-2xl">
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="container mx-auto my-24">
+    <h2 class="text-4xl font-black text-center ">Let’s Discuss</h2>
+    <p class="mt-6 text-[#12192D99] text-center">Yes, you can run unit tests and view the results directly within the
+      app. <br> The integrated testing features allow for a streamlined .</p>
+    <!-- discuss container -->
+    <div class="flex flex-col lg:flex-row justify-between mt-12">
+
+      <div id="loading-spinner" class="text-center my-40 hidden">
+        <span class="loading loading-bars loading-xs"></span>
+        <span class="loading loading-bars loading-sm"></span>
+        <span class="loading loading-bars loading-md"></span>
+        <span class="loading loading-bars loading-lg"></span>
+      </div>
+      <!-- card container -->
+      <div id="card-container">
+        <!-- spinner or loader -->
+         
+        <!-- card 1 -->
+
+      </div>
+      <!-- mark as read container   -->
+      <div class="min-w-96 bg-[#12192D0D] rounded-2xl p-6">
+        <div class="flex justify-between">
+          <h4 class="text-xl font-bold">Title</h4>
+          <div class="flex gap-1">
+            <img src="images/readed.svg" alt="">
+            <p class="w-full">Mark as read ( <span id="counter"></span> )</p>
+          </div>
+        </div>
+        <div id="read-container">
+          <!-- card1 -->
+          <!-- <div class="my-4 p-4 flex items-center  justify-between bg-white rounded-2xl">
               
             </div> -->
-          </div>
         </div>
       </div>
+    </div>
 
-      <!-- join our forum  -->
-        
-      <div class="hero lg:h-[550px] rounded-3xl bg-[#12132D] mt-24">
-        
-        <div class="hero-content flex-col gap-4 lg:gap-32 lg:flex-row">
-          <div class="">
-            <h1 class="text-2xl lg:text-4xl font-black text-white ">Join Our Forum</h1>
-            <p class="py-6 text-[#FFFFFFCC] text-xl font-medium">Share your favorite opinion and win and wp forum coffee mug! Yes, you can run unit tests and view the results directly within the app. </p>
-            <!-- Button -->
-            <button class="px-10 py-4 rounded-3xl border-0 bg-[#797DFC] text-white btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">Registered Now</button>
-          </div>
-          <div class="card shrink-0 w-full max-w-sm shadow-2xl">
-            <div class="hero-overlay bg-opacity-10"></div>
-            <img class="" src="images/joinforum.png" alt="">
-          </div>
+    <!-- join our forum  -->
+
+    <div class="hero lg:h-[550px] rounded-3xl bg-[#12132D] mt-24">
+
+      <div class="hero-content flex-col gap-4 lg:gap-32 lg:flex-row">
+        <div class="">
+          <h1 class="text-2xl lg:text-4xl font-black text-white ">Join Our Forum</h1>
+          <p class="py-6 text-[#FFFFFFCC] text-xl font-medium">Share your favorite opinion and win and wp forum coffee
+            mug! Yes, you can run unit tests and view the results directly within the app. </p>
+          <!-- Button -->
+          <button
+            class="px-10 py-4 rounded-3xl border-0 bg-[#797DFC] text-white btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">Registered
+            Now</button>
+        </div>
+        <div class="card shrink-0 w-full max-w-sm shadow-2xl">
+          <div class="hero-overlay bg-opacity-10"></div>
+          <img class="" src="images/joinforum.png" alt="">
         </div>
       </div>
+    </div>
 
-      <!-- latest post section -->
-      <section class="mt-24">
-        <h2 class="text-4xl font-black text-center ">Latest Posts</h2>
-        <p class="mt-6 text-[#12192D99] text-center">Yes, you can run unit tests and view the results directly within the app. <br>     The integrated testing features allow for a streamlined .</p>
+    <!-- latest post section -->
+    <section class="mt-24">
+      <h2 class="text-4xl font-black text-center ">Latest Posts</h2>
+      <p class="mt-6 text-[#12192D99] text-center">Yes, you can run unit tests and view the results directly within the
+        app. <br> The integrated testing features allow for a streamlined .</p>
 
-        <div id="latest-Post-Container" class="mt-12 grid gap-4 grid-cols-1 lg:grid-cols-3">
-           
-           
-        </div>
+      <div id="latest-Post-Container" class="mt-12 grid gap-4 grid-cols-1 lg:grid-cols-3">
 
-      </section>
 
-    </main>
-    <footer class="footer footer-center p-20 bg-gray-100">
-      <aside>
-       <img class="inline-block fill-current" src="images/logo.png" alt="">
-        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a <br> piece of classical Latin literature from 45 BC</p>
-      </aside> 
-      <nav>
-        <div class="grid grid-flow-col gap-4">
-          <a><img src="images/Social.svg" alt=""></a>
-        </div>
-      </nav>
-      <div class="w-full border border-x-2 border-solid border-[ #30325E1A]"></div>
-      <p class="text-[#12132D80] text-sm">2017, All Rights Reserved.</p>
-    </footer>
-    <script src="js/index.js"></script>
+      </div>
+
+    </section>
+
+  </main>
+  <footer class="footer footer-center p-20 bg-gray-100">
+    <aside>
+      <img class="inline-block fill-current" src="images/logo.png" alt="">
+      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a <br> piece of classical
+        Latin literature from 45 BC</p>
+    </aside>
+    <nav>
+      <div class="grid grid-flow-col gap-4">
+        <a><img src="images/Social.svg" alt=""></a>
+      </div>
+    </nav>
+    <div class="w-full border border-x-2 border-solid border-[ #30325E1A]"></div>
+    <p class="text-[#12132D80] text-sm">2017, All Rights Reserved.</p>
+  </footer>
+  <script src="js/index.js"></script>
 </body>
 
 </html>

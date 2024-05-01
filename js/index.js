@@ -1,19 +1,36 @@
-const allPostData=async ()=>{
-    const res=await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
-    const data=await res.json();
+const allPostData = async (searchText) => {
+  // console.log(searchText)
+  if (searchText != undefined) {
+    console.log(searchText)
+    const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchText}`);
+    const data = await res.json();
+    // console.log(data.posts);
     const allPosts = data.posts;
     displayAllPosts(allPosts);
+  }else{
+    const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
+    const data = await res.json();
+    const allPosts = data.posts;
+    displayAllPosts(allPosts);
+  }
+ 
 }
 
-const displayAllPosts=(allPosts) =>{
-    const cardContainer=document.getElementById('card-container');
-    
-    allPosts.forEach(post =>{
-      
-      
-        const postCard = document.createElement('div');
-        postCard.classList = `my-5  flex flex-col lg:flex-row gap-4 p-16 bg-[#7D7DFC1A] rounded-2xl`;
-        postCard.innerHTML=`
+
+const displayAllPosts = (allPosts) => {
+  // console.log(allPosts)
+  const cardContainer = document.getElementById('card-container');
+
+  // clear phone container cards before adding new cards
+  cardContainer.textContent = '';
+  
+
+  allPosts.forEach(post => {
+    // console.log(post)
+
+    const postCard = document.createElement('div');
+    postCard.classList = `my-5  flex flex-col lg:flex-row gap-4 p-16 bg-[#7D7DFC1A] rounded-2xl`;
+    postCard.innerHTML = `
         <!-- 1st -->
             <div class="indicator">
               <span id="isActive-field" class="${post.isActive? 'indicator-item badge bg-green-500'
@@ -55,24 +72,25 @@ const displayAllPosts=(allPosts) =>{
                </div>
             </div> 
         `
-        // 
-        
-        cardContainer.appendChild(postCard);    
-    })
+    // 
+
+    cardContainer.appendChild(postCard);
+  })
+  toggleLoadingSpinner(false)
 }
 
-let count=0;
-allPostData();
+let count = 0;
+// allPostData();
 
-const markAsRead=(title,viewCount) =>{
+const markAsRead = (title, viewCount) => {
   count++
   console.log(count)
-  const counter=document.getElementById('counter');
-  counter.innerText=count;
-  const readContainer=document.getElementById('read-container');
-  const cardDiv=document.createElement('div');
-  cardDiv.classList=`my-4 p-4 flex items-center  justify-between bg-white rounded-2xl`;
-  cardDiv.innerHTML=`
+  const counter = document.getElementById('counter');
+  counter.innerText = count;
+  const readContainer = document.getElementById('read-container');
+  const cardDiv = document.createElement('div');
+  cardDiv.classList = `my-4 p-4 flex items-center  justify-between bg-white rounded-2xl`;
+  cardDiv.innerHTML = `
   <p class="w-1/2">${title}</p>
   <div class="flex items-center">
     <img src="images/tabler-icon-eye.svg" alt="">
@@ -84,20 +102,23 @@ const markAsRead=(title,viewCount) =>{
 }
 
 
-const latestPost=async ()=>{
-  const res=await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts');
-  const data=await res.json();
+const latestPost = async () => {
+  const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts');
+  const data = await res.json();
   displayLatestPost(data);
 }
 
-const displayLatestPost=(allPosts) =>{
-  console.log(allPosts)
-  const latestPostContainer=document.getElementById('latest-Post-Container');
-  
-  allPosts.forEach(post =>{
+
+
+
+const displayLatestPost = (allPosts) => {
+  // console.log(allPosts)
+  const latestPostContainer = document.getElementById('latest-Post-Container');
+
+  allPosts.forEach(post => {
     const latestCard = document.createElement('div');
     latestCard.classList = `card  bg-base-100 shadow-xl`;
-    latestCard.innerHTML=` 
+    latestCard.innerHTML = ` 
 
     <figure class="p-6"><img class="rounded-2xl" src="${post.cover_image}" alt="Shoes" /></figure>
               <div class="card-body">
@@ -121,26 +142,36 @@ const displayLatestPost=(allPosts) =>{
                 </div>
               </div>
     `
-    latestPostContainer.appendChild(latestCard); 
+    latestPostContainer.appendChild(latestCard);
   })
 }
 
-latestPost();
+
+
+
+
+
 
 
 // handle search button
-const handleSearch = (isShowAll) => {
+const handleSearch = () => {
   toggleLoadingSpinner(true);
+
+  
+  const cardContainer = document.getElementById('card-container');
+
+  // clear phone container cards before adding new cards
+  cardContainer.textContent = '';
+  
   const searchField = document.getElementById('search-field');
   const searchText = searchField.value;
-  // console.log(searchText);
-  loadData(searchText,isShowAll)
+  allPostData(searchText)     
 }
-
 
 // handle loading spinner
 const toggleLoadingSpinner = (isLoading) => {
   const loadingSpinner = document.getElementById('loading-spinner');
+  console.log(loadingSpinner);
   if (isLoading) {
       loadingSpinner.classList.remove('hidden')
   }
@@ -148,6 +179,13 @@ const toggleLoadingSpinner = (isLoading) => {
       loadingSpinner.classList.add('hidden')
   }
 }
+
+
+
+latestPost();
+allPostData();
+
+
 
 
 
