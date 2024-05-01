@@ -29,7 +29,7 @@ const displayAllPosts = (allPosts) => {
     // console.log(post)
 
     const postCard = document.createElement('div');
-    postCard.classList = `my-5  flex flex-col lg:flex-row gap-4 p-16 bg-[#7D7DFC1A] rounded-2xl`;
+    postCard.classList = `my-5  flex flex-col lg:flex-row gap-4 p-4 lg:p-16 bg-[#7D7DFC1A] rounded-2xl`;
     postCard.innerHTML = `
         <!-- 1st -->
             <div class="indicator">
@@ -117,7 +117,7 @@ const displayLatestPost = (allPosts) => {
 
   allPosts.forEach(post => {
     const latestCard = document.createElement('div');
-    latestCard.classList = `card  bg-base-100 shadow-xl`;
+    latestCard.classList = `card bg-base-100 shadow-xl`;
     latestCard.innerHTML = ` 
 
     <figure class="p-6"><img class="rounded-2xl" src="${post.cover_image}" alt="Shoes" /></figure>
@@ -157,7 +157,7 @@ const displayLatestPost = (allPosts) => {
 const handleSearch = () => {
   toggleLoadingSpinner(true);
 
-  
+
   const cardContainer = document.getElementById('card-container');
 
   // clear phone container cards before adding new cards
